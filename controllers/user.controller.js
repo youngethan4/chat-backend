@@ -12,7 +12,6 @@ exports.deleteUser = async (req, res) => {
 
 exports.updateUser = async (req, res) => {
   const id = req.params.id;
-  console.log(id);
   try {
     let user = await db.User.update(req.body, { where: { id: id } });
     res.json(user);
@@ -39,3 +38,9 @@ exports.getUsers = async (req, res) => {
     res.sendStatus(500);
   }
 };
+
+exports.searchUsers = (req, res) => {};
+
+exports.getUserRelationships = (req, res) => {};
+
+exports.getUserGroups = (req, res) => {};
